@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" style=""><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Security Corporation Brochure</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&amp;family=Rajdhani:wght@500;600;700&amp;display=swap" rel="stylesheet">
+
+    <style>
+      :root {
+        --bg-dark: #0a0e27;
+        --bg-darker: #050714;
+        --accent-cyan: #00d4ff;
+        --accent-purple: #7c3aed;
+        --text-main: #e2e8f0;
+        --text-muted: #94a3b8;
+        --glass-bg: rgba(255, 255, 255, 0.03);
+        --glass-border: rgba(0, 212, 255, 0.15);
+        --font-heading: 'Rajdhani', sans-serif;
+        --font-body: 'Inter', sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: var(--bg-dark);
+        background-image:
+          radial-gradient(circle at 10% 20%, rgba(124, 58, 237, 0.15) 0%, transparent 40%),
+          radial-gradient(circle at 90% 80%, rgba(0, 212, 255, 0.1) 0%, transparent 40%),
+          linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
+        background-size:
+          100% 100%,
+          100% 100%,
+          40px 40px,
+          40px 40px;
+        color: var(--text-main);
+        font-family: var(--font-body);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+        overflow-x: hidden;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 20px;
+      }
+
+      /* Typography */
+      h1,
+      h2,
+      h3 {
+        font-family: var(--font-heading);
+        text-transform: uppercase;
+        line-height: 1.2;
+      }
+
+      h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        letter-spacing: 2px;
+        background: linear-gradient(90deg, #fff, var(--accent-cyan));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 0.5rem;
+        text-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+      }
+
+      h2 {
+        font-size: 2rem;
+        color: var(--accent-cyan);
+        margin-bottom: 1.5rem;
+        position: relative;
+        display: inline-block;
+      }
+
+      h2::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 60px;
+        height: 3px;
+        background: var(--accent-purple);
+        box-shadow: 0 0 10px var(--accent-purple);
+      }
+
+      h3 {
+        font-size: 1.5rem;
+        color: white;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      p {
+        margin-bottom: 1rem;
+        color: var(--text-muted);
+      }
+
+      ul {
+        list-style: none;
+        margin-left: 0;
+      }
+
+      li {
+        margin-bottom: 0.5rem;
+        position: relative;
+        padding-left: 20px;
+        color: var(--text-main);
+        font-size: 0.95rem;
+      }
+
+      li::before {
+        content: '›';
+        position: absolute;
+        left: 0;
+        color: var(--accent-cyan);
+        font-weight: bold;
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+      }
+
+      /* Components */
+      .glass-panel {
+        background: var(--glass-bg);
+        border: 1px solid var(--glass-border);
+        border-radius: 12px;
+        backdrop-filter: blur(12px);
+        padding: 2rem;
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .glass-panel::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, var(--accent-cyan), transparent);
+        opacity: 0.5;
+      }
+
+      /* Hero Section */
+      header {
+        text-align: center;
+        padding: 4rem 0 3rem;
+        position: relative;
+      }
+
+      .hero-icon {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+        display: inline-block;
+        filter: drop-shadow(0 0 15px var(--accent-cyan));
+        position: relative;
+      }
+
+      /* CSS Shield Shape */
+      .shield {
+        width: 60px;
+        height: 70px;
+        background: rgba(0, 212, 255, 0.1);
+        border: 2px solid var(--accent-cyan);
+        margin: 0 auto 20px;
+        position: relative;
+        clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+        box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+      }
+
+      .shield::after {
+        content: '';
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+        border: 1px solid var(--accent-purple);
+        clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+      }
+
+      .tagline {
+        font-size: 1.1rem;
+        color: var(--accent-cyan);
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        font-family: var(--font-heading);
+        font-weight: 600;
+      }
+
+      /* Sections */
+      .section-intro {
+        margin-bottom: 4rem;
+        text-align: center;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .section-intro p {
+        font-size: 1.1rem;
+        color: #fff;
+      }
+
+      /* Services Grid */
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+        gap: 2rem;
+        margin-bottom: 5rem;
+      }
+
+      .service-card {
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+
+      .service-card h3 {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 10px;
+      }
+
+      .service-icon {
+        font-size: 1.5rem;
+        filter: drop-shadow(0 0 5px var(--accent-cyan));
+      }
+
+      .sub-heading {
+        font-family: var(--font-heading);
+        color: var(--accent-purple);
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-top: 1.5rem;
+        margin-bottom: 0.8rem;
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+      }
+
+      /* Stats Section */
+      .stats-section {
+        margin-bottom: 5rem;
+      }
+
+      .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2rem;
+      }
+
+      .stat-card {
+        text-align: center;
+        padding: 1.5rem;
+        background: linear-gradient(145deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.05) 100%);
+        border: 1px solid rgba(124, 58, 237, 0.2);
+        border-radius: 8px;
+      }
+
+      .stat-number {
+        display: block;
+        font-family: var(--font-heading);
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--accent-cyan);
+        margin-bottom: 0.5rem;
+        text-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+      }
+
+      .stat-label {
+        font-size: 0.9rem;
+        color: var(--text-muted);
+        line-height: 1.4;
+      }
+
+      /* Footer */
+      footer {
+        border-top: 1px solid var(--glass-border);
+        padding-top: 3rem;
+        text-align: center;
+        background: linear-gradient(to top, #050714, transparent);
+      }
+
+      .contact-info {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 3rem;
+        margin-top: 2rem;
+      }
+
+      .contact-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .contact-label {
+        color: var(--accent-purple);
+        font-family: var(--font-heading);
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        letter-spacing: 1px;
+      }
+
+      .contact-value {
+        color: #fff;
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 2.2rem;
+        }
+        .services-grid {
+          grid-template-columns: 1fr;
+        }
+        .contact-info {
+          flex-direction: column;
+          gap: 1.5rem;
+        }
+        .container {
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body style="">
+    <div class="container">
+      <!-- Hero Section -->
+      <header>
+        <div class="shield"></div>
+        <h1>CYBER SECURITY CORPORATION</h1>
+        <div class="tagline">Cyber Security | Forensics | Compliance | Trainings</div>
+      </header>
+
+      <!-- Who We Are -->
+      <section class="section-intro glass-panel">
+        <h2>WHO WE ARE</h2>
+        <p style="text-align: center;">
+          Cyber threats are no longer just IT risks—they are legal, financial, and reputational liabilities. Cyber
+          Security Corporation operates at the intersection of technology, law, and investigation, delivering enterprise
+          grade cyber risk management solutions.&nbsp;</p><p style="text-align: center;"><span style="font-size: 1.1rem;">Our Services include:</span></p>
+      </section>
+
+      <!-- Services Grid -->
+      <section class="services-grid">
+        <!-- Card 1 -->
+        <div class="glass-panel service-card">
+          <h3><span class="service-icon">🛡️</span> CYBER SECURITY &amp; RISK CONSULTING</h3>
+          <p>
+            A business without security is not a business, it's an open incident waiting to happen. We design, assess,
+            and strengthen security posture aligned with IT ACT 2000, CERT-In Directives, RBI frameworks, DPDP Act and
+            Global Standards.
+          </p>
+          <div class="sub-heading">Key Offerings:</div>
+          <ul>
+            <li>Vulnerability Assessment &amp; Penetration Testing (VAPT)</li>
+            <li>Third-Party Security Assessment</li>
+            <li>SOC &amp; SIEM Implementation</li>
+            <li>Threat Intelligence &amp; Monitoring</li>
+            <li>Incident Response &amp; Breach Management</li>
+            <li>Cyber Policy &amp; Governance Frameworks</li>
+          </ul>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="glass-panel service-card">
+          <h3><span class="service-icon">🔍</span> DIGITAL FORENSICS &amp; INVESTIGATION</h3>
+          <p>
+            When things go wrong, evidence decides everything. We provide forensically sound, legally admissible digital
+            evidence services, supporting criminal &amp; civil matters.
+          </p>
+          <div class="sub-heading">Capabilities:</div>
+          <ul>
+            <li>Forensic Data Acquisition &amp; Analysis</li>
+            <li>Cybercrime Investigation</li>
+            <li>Email &amp; Financial Fraud Analysis</li>
+            <li>Data Recovery &amp; Reconstruction</li>
+            <li>Expert Witness &amp; Litigation Support</li>
+          </ul>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="glass-panel service-card">
+          <h3><span class="service-icon">⚖️</span> CYBER LAW &amp; COMPLIANCE</h3>
+          <p>
+            Security without compliance is incomplete. Compliance without enforcement is useless. We bridge the gap
+            between legal mandates and technical implementation.
+          </p>
+          <div class="sub-heading">Service Scope:</div>
+          <ul>
+            <li>DPDP Act Compliance</li>
+            <li>CERT-In &amp; RBI Compliance</li>
+            <li>Cyber Audit &amp; Certification</li>
+            <li>Legal Documentation &amp; Policy Drafting</li>
+            <li>IT Act Advisory</li>
+          </ul>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="glass-panel service-card">
+          <h3><span class="service-icon">🎓</span> TRAINING &amp; CAPACITY BUILDING</h3>
+          <p>
+            Most breaches don't happen due to lack of tools, they happen due to lack of awareness. We deliver
+            high-impact, practical training programs designed for real-world scenarios.
+          </p>
+          <div class="sub-heading">Training Domains:</div>
+          <ul>
+            <li>Cyber Security Operations</li>
+            <li>Cybercrime Investigation</li>
+            <li>Digital Forensics</li>
+            <li>Cyber Law &amp; Compliance</li>
+            <li>DPDPA Training</li>
+            <li>Cyber Audit</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Why Us / Stats -->
+      <section class="stats-section">
+        <h2>WHY CYBER SECURITY CORPORATION</h2>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <span class="stat-number">8000+</span>
+            <span class="stat-label">Cybercrime Cases Assisted</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">5000+</span>
+            <span class="stat-label">Forensic Examinations</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">40000+</span>
+            <span class="stat-label">Law Enforcement Officers Trained</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">13000+</span>
+            <span class="stat-label">Judges &amp; Judicial Officials Trained from 15 Countries Worldwide</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">600000+</span>
+            <span class="stat-label">Professionals Trained Across Corporates, Industries &amp; Government</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number">97%+</span>
+            <span class="stat-label">Training Effectiveness</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer Contact -->
+      <footer>
+        <h2>CONTACT</h2>
+        <div class="contact-info">
+          <div class="contact-item">
+            <span class="contact-label">EMAIL</span>
+            <span class="contact-value"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="60080c04201205040906060d01090c4e030f0d">[email&#160;protected]</a></span>
+            <span class="contact-value"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="21494d45614258434453524e4d5455484e4f0f484f">[email&#160;protected]</a></span>
+            </div><div class="contact-item"><span class="contact-label">PHONE</span>
+            <span class="contact-value">+91-7709619249</span>
+            <span class="contact-value">+91-9637612097</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+  
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4edd5f8ec12a48cfa682ab8261b80a79","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body></html>
